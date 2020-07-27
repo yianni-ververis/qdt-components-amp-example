@@ -1,0 +1,34 @@
+{
+  "bookendVersion": "v1.0",
+  "shareProviders": [
+    "facebook",
+    "twitter",
+    "email"
+  ],
+  "components": [
+    {
+      "type": "heading",
+      "text": "More to read"
+    },
+    {
+      "type": "small",
+      "title": "Learn about Qdt-components",
+      "url": "https://github.com/qlik-demo-team/qdt-components",
+      "image": "assets/banner.png"
+    },
+    {
+      "type": "landscape",
+      "title": "React examples",
+      "url": "https://qdt-apps.qlik.com/qdt-components/react/v3/#/",
+      "image": "assets/banner.png",
+      "category": "React"
+    },
+    {
+      "type": "portrait",
+      "title": "Observablehq examples",
+      "url": "https://observablehq.com/collection/@yianni-ververis/qdt-components",
+      "image": "assets/banner.png",
+      "category": "Observablehq"
+    }
+  ]
+}

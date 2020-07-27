@@ -1,0 +1,161 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <title>Qdt-components</title>
+    <link rel="canonical" href="qdt-components.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>
+      body{
+        -webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:
+        -amp-start 8s steps(1,end) 0s 1 normal both;
+        -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+        animation:-amp-start 8s steps(1,end) 0s 1 normal both
+      }
+      @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+      @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{
+          -webkit-animation:none;
+          -moz-animation:none;
+          -ms-animation:none;
+          animation:none
+        }
+      </style>
+    </noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
+    <script async src="js/qdt-components.min.js"></script>
+    <script async src="js/index.js"></script>
+    <style amp-custom>
+      amp-story {
+        font-family: 'Oswald',sans-serif;
+        color: #fff;
+      }
+      amp-story-page {
+        background-color: #000;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 2.875em;
+        font-weight: normal;
+        line-height: 1.174;
+      }
+      p {
+        font-weight: normal;
+        font-size: 1.3em;
+        line-height: 1.5em;
+        color: #fff;
+      }
+      q {
+        font-weight: 300;
+        font-size: 1.1em;
+      }
+      amp-story-grid-layer.bottom {
+        align-content:end;
+      }
+      amp-story-grid-layer.noedge {
+        padding: 0px;
+      }
+      amp-story-grid-layer.center-text {
+        align-content: center;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+      }
+      .banner-text {
+        text-align: center;
+        background-color: #000;
+        line-height: 2em;
+      }
+      #qdtbarchart {
+        background-color: white;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body onload="init();">
+    <!-- Cover page -->
+    <amp-story standalone
+        title="Qdt-components"
+        publisher="Qlik Demo Team"
+        publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
+        poster-portrait-src="assets/cover.jpg">
+
+        <amp-story-page id="cover">
+          <amp-story-grid-layer template="vertical">
+            <h1>Qdt-components</h1>
+            <p>By the Qlik Demo Team</p>
+            <amp-img src="assets/banner.png"
+                width="720" height="1280"
+                layout="responsive">
+            </amp-img>
+          </amp-story-grid-layer>
+        </amp-story-page>
+
+        <!-- Page 1 (Cat): 1 layer (vertical) -->
+        <amp-story-page id="page1">
+          <amp-story-grid-layer template="vertical">
+            <h1>QdtList</h1>
+            <p>A List object with Enigma.js and the Engine API</p>
+            <div id="qdtselections1"></div>
+            <div id="qdtlist"></div>
+          </amp-story-grid-layer>
+        </amp-story-page>
+
+        <!-- Page 2 -->
+        <amp-story-page id="page2">
+            <amp-story-grid-layer template="vertical">
+              <h1>QdtPicasso</h1>
+              <p>A Picasso barchart with Enigma.js and the Engine API</p>
+              <div id="qdtselections2"></div>
+              <div id="qdtbarchart"></div>
+          </amp-story-grid-layer>
+        </amp-story-page>
+
+        <!-- Page 2 -->
+        <amp-story-page id="page3">
+          <amp-story-grid-layer template="vertical">
+            <h1>QdtMap</h1>
+            <p>A map with Mapbox GL, Enigma.js and the Engine API</p>
+            <div id="qdtmap"></div>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-carousel on="slideChange:ampSelector.toggle(index=event.index)"
+          layout="responsive" width="412" height="309" type="slides" loop id="carousel">
+          <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheddar-chaser.jpg?1540228205366"
+              width="412" height="309" layout="responsive"></amp-img>
+          <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheese.jpg?1540228223785"
+              width="412" height="309" layout="responsive"></amp-img>
+          <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fmouse.jpg?1540228223963"
+              width="412" height="309" layout="responsive"></amp-img>
+      </amp-carousel>
+      <amp-selector layout="container" name="single_image_select" id="ampSelector">
+          <amp-carousel class="thumbnail-carousel" layout="fixed-height" width="auto" height="78">
+              <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheddar-chaser-thumb.jpg?1540228250623"
+                  option="0" selected on="tap:carousel.goToSlide(index=0)" tabindex="1" role="button"
+                  width="96" height="72" layout="fixed"></amp-img>
+              <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fcheese-thumb.jpg?1540228249992"
+                  option="1" on="tap:carousel.goToSlide(index=1)" tabindex="1" role="button"
+                  width="96" height="72" layout="fixed"></amp-img>
+              <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631%2Fmouse-thumb.jpg?1540228249062"
+                  option="2" on="tap:carousel.goToSlide(index=2)" tabindex="1" role="button"
+                  width="96" height="72" layout="fixed"></amp-img>
+          </amp-carousel>
+      </amp-selector>
+
+      <!-- Bookend -->
+      <amp-story-bookend src="bookend.json" layout="nodisplay"></amp-story-bookend>
+    </amp-story>
+  </body>
+</html>
